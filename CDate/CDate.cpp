@@ -54,9 +54,28 @@ bool CDate::NamNhuan() {
 	}
 	return false;
 }
+int CDate::SoNgay()const {
+	int Temp = 0;
+
+	switch (m_MM) {
+		case 1: Temp = m_DD + 365 * m_YY;			break;
+		case 2: Temp = 31 + m_DD + 365 * m_YY;		break;
+		case 3: Temp = 59 + m_DD + 365 * m_YY;		break;
+		case 4: Temp = 90 + m_DD + 365 * m_YY;		break;
+		case 5: Temp = 120 + m_DD + 365 * m_YY;		break;
+		case 6: Temp = 151 + m_DD + 365 * m_YY;		break;
+		case 7: Temp = 181 + m_DD + 365 * m_YY;		break;
+		case 8: Temp = 212 + m_DD + 365 * m_YY;		break;
+		case 9: Temp = 243 + m_DD + 365 * m_YY;		break;
+		case 10: Temp = 273 + m_DD + 365 * m_YY;	break;
+		case 11: Temp = 304 + m_DD + 365 * m_YY;	break;
+		case 12: Temp = 334 + m_DD + 365 * m_YY;	break;
+	}
+	return Temp;
+}
 void CDate::Cong(CDate CDate1) {
 	bool Stt_Loop = true;
-	int Temp = CDate1.GetDD();
+	int Temp = CDate1.SoNgay();
 	int Ngay_T2 = 28;
 	if (NamNhuan()) {
 		Ngay_T2 = 29;
@@ -134,7 +153,7 @@ void CDate::Cong(CDate CDate1) {
 void CDate::Tru(CDate CDate1) {
 	bool Stt_Loop = true;
 	bool Stt_Sub = false;
-	int Temp = CDate1.GetDD();
+	int Temp = CDate1.SoNgay();
 	int Ngay_T2 = 28;
 
 	while (Stt_Loop) {

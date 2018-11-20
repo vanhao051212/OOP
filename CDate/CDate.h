@@ -18,6 +18,7 @@ public:
 	void Output();
 	void ResetCDate();
 	bool NamNhuan();
+	int SoNgay()const;
 	void Cong(CDate CDate1);
 	void Tru(CDate CDate1);
 
@@ -30,7 +31,7 @@ public:
 private:
 	int m_DD=1;
 	int m_MM=1;
-	int m_YY=2000;
+	int m_YY=0;
 };
 
 std::istream & operator >>(std::istream& cin, CDate & cdate);
