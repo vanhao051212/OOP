@@ -1,0 +1,7 @@
+﻿Xây dựng các loại đối tượng sinh viên, học sinh, công nhân, nghệ sĩ, ca sĩ gồm
+các thông tin cơ bản như họ tên, ngày tháng năm sinh, nơi ở, giới tính. Sinh viên
+thì xác định thêm là sinh viên năm thứ mấy, niên khoá, học trường nào, ngành
+học. Học sinh thì xác định thêm trường học và lớp. Công nhân có nơi làm việc và
+lương. Nghệ sĩ, ca sĩ có nghệ danh và lĩnh vực chuyên môn. Viết chương trình
+cho phép nhập vào một trong các loại đối tượng kể trên. In thông tin đối tượng
+đó.
